@@ -117,9 +117,9 @@ def mainProg(videoFileName='3.mp4', jsonFileName='sendToServer.json', framesToPr
             if (count == arr_size):
 
                 v_arr = np.concatenate((v_x_arr, v_y_arr), axis=0).reshape((arr_size, 2))
-                print("x", v_x_arr)
+                '''print("x", v_x_arr)
                 print("y", v_y_arr)
-                print("arr", v_arr)
+                print("arr", v_arr)'''
 
                 for x in range(10, 100):
                     pca_eig, pca_vec = pca(v_arr[:x, :])
@@ -166,8 +166,7 @@ def mainProg(videoFileName='3.mp4', jsonFileName='sendToServer.json', framesToPr
                 filePathJSON = jsonFileName
                 json.dump(dictJSON, codecs.open(filePathJSON, 'w', encoding='utf-8'), separators=(',', ':'),
                           sort_keys=True, indent=4)
-                jsonString=json.dumps(dictJSON, codecs.open(filePathJSON, 'w', encoding='utf-8'), separators=(',', ':'),
-                          sort_keys=True, indent=4)
+                jsonString=json.dumps(dictJSON, sort_keys=True,indent=4, separators=(',', ': '))
                 if isPC:
                     plt.subplot(4, 1, 3)
                 fs = 0.03
@@ -187,7 +186,7 @@ def mainProg(videoFileName='3.mp4', jsonFileName='sendToServer.json', framesToPr
                 else:
                     return jsonString
             count += 1
-            print('frame :' + str(count) + '\r', flush=True)
+            print('frame :' + str(count)+' of '+str(arr_size)+' = '+str(100*count/arr_size)+'% complete',end='\r', flush=True)
             if isPC:
                 k = cv2.waitKey(30) & 0xff
                 if k == 27:
@@ -202,7 +201,7 @@ import sys
 
 # mainProg('3.mp4','aa.json')
 if (len(sys.argv) == 1):
-    mainProg(isPC=True)
+    print(mainProg())
 else:
-    mainProg(sys.argv[1], sys.argv[2], int(sys.argv[3]), int(sys.argv[4]), int(sys.argv[5]), int(sys.argv[6]),
-             int(sys.argv[7]), bool(sys.argv[8]))
+    print(mainProg(sys.argv[1], sys.argv[2], int(sys.argv[3]), int(sys.argv[4]), int(sys.argv[5]), int(sys.argv[6]),
+             int(sys.argv[7]), bool(sys.argv[8])))
