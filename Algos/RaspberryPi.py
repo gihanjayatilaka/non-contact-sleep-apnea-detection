@@ -81,6 +81,7 @@ def mainProg(videoFileName='3.mp4', jsonFileName='sendToServer.json', framesToPr
     y1, x1 = y_1, x_1
     y2, x2 = y_2, x_2
 
+
     while (1):
         ret, frame = cap.read()
         if ret == True:
@@ -165,6 +166,8 @@ def mainProg(videoFileName='3.mp4', jsonFileName='sendToServer.json', framesToPr
                 filePathJSON = jsonFileName
                 json.dump(dictJSON, codecs.open(filePathJSON, 'w', encoding='utf-8'), separators=(',', ':'),
                           sort_keys=True, indent=4)
+                jsonString=json.dumps(dictJSON, codecs.open(filePathJSON, 'w', encoding='utf-8'), separators=(',', ':'),
+                          sort_keys=True, indent=4)
                 if isPC:
                     plt.subplot(4, 1, 3)
                 fs = 0.03
@@ -180,8 +183,9 @@ def mainProg(videoFileName='3.mp4', jsonFileName='sendToServer.json', framesToPr
                     plt.savefig(reportName)
 
                     plt.show()
+                    return jsonString
                 else:
-                    return
+                    return jsonString
             count += 1
             print('frame :' + str(count) + '\r', flush=True)
             if isPC:
