@@ -1,12 +1,9 @@
 import numpy as np
-import argparse
 import cv2
-import matplotlib.pyplot as plt
 from scipy import signal
 import numpy.linalg as LA
 import scipy.ndimage.filters as filt
 import datetime
-import serial
 from time import sleep
 import codecs, json
 
@@ -55,6 +52,10 @@ def pca(data):
 
 def mainProg(videoFileName='3.mp4', jsonFileName='sendToServer.json', framesToProcess=1000, x_1=275, y_1=246, x_2=326,
              y_2=317, smootheningParam=150, isPC=False):
+    if isPC:
+        import matplotlib.pyplot as plt
+    else:
+        import serial
     if videoFileName == '0':
         cap = cv2.VideoCapture(0)
     else:
