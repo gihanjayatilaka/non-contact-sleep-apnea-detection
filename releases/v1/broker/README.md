@@ -1,4 +1,4 @@
-To install mosquitto : 
+To install mosquitto : <br>
 	sudo apt-get install mosquitto
 
 To get mosquitto-auth-plugin:
