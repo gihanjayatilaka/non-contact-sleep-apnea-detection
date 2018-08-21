@@ -1,7 +1,7 @@
 # Sleep Apnea Detection
 
 ## Objective
-Developing a 100% non instrusive method for detecting sleep apnea in infants.
+Developing a 100% non intrusive method for detecting sleep apnea in infants.
 
 ## Approach
 A video feed is processed to detect the breathing pattern and then it is assessed for anomalies.
