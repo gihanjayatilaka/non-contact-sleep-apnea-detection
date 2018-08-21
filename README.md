@@ -17,8 +17,10 @@ Raspberry pi camera
 Python3, OpenCV
 
 ## People
-[http://gihan.me](Gihan Jayatilaka) , [http://teambitecode.com/people/harshana](Harshana Weligampola) , [http://teambitecode.com/people/suren](Suren Sritharan) and [http://teambitecode.com/people/pankayraj](Pankayaraj Pathmanathan) developed this system as a course project for CO321 CO323 CO325.
-The project was supervised by [http://roshan.ragel.net](Dr. Roshan Ragel) and [mailto:isurunawinne@gmail.com](Dr.Isuru Nawinne) .
-The embedded system was developed by [http://teambitecode.com/people/nuwan](Nuwan Jaliyagoda) and [http://teambitecode.com/people/anupamali](Anupamali Willamuna).
+[Gihan Jayatilaka](http://gihan.me) , [Harshana Weligampola](http://teambitecode.com/people/harshana) , [Suren Sritharan](http://teambitecode.com/people/suren) and [Pankayaraj Pathmanathan](http://teambitecode.com/people/pankayraj) developed this system as a course project for CO321 CO323 CO325.
+The project was supervised by [Dr. Roshan Ragel](http://roshan.ragel.net) and [Dr.Isuru Nawinne](mailto:isurunawinne@gmail.com) .
+The embedded system was developed by [Nuwan Jaliyagoda](http://teambitecode.com/people/nuwan) and [Anupamali Willamuna](http://teambitecode.com/people/anupamali).
 
+##Acknowledgements
+[Sanjaya Herath](mailto:slh.1995@gmail.com) provided the hardware components. [Dinidu Bhathiya](mailto:Dinidu.Bhathiya@syscolabs.com) provided a dataset. 
 
