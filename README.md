@@ -21,6 +21,6 @@ Python3, OpenCV
 The project was supervised by [Dr. Roshan Ragel](http://roshan.ragel.net) and [Dr.Isuru Nawinne](mailto:isurunawinne@gmail.com) .
 The embedded system was developed by [Nuwan Jaliyagoda](http://teambitecode.com/people/nuwan) and [Anupamali Willamuna](http://teambitecode.com/people/anupamali).
 
-##Acknowledgements
+## Acknowledgements
 [Sanjaya Herath](mailto:slh.1995@gmail.com) provided the hardware components. [Dinidu Bhathiya](mailto:Dinidu.Bhathiya@syscolabs.com) provided a dataset. 
 
