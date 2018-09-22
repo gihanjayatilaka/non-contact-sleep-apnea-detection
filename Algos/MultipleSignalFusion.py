@@ -39,7 +39,7 @@ if __name__== "__main__":
 
             grey_vid = cv2.cvtColor(frame, cv2.IMREAD_GRAYSCALE)
             #cv2.imshow('Original', frame)
-            edgedFrame = cv2.Canny(grey_vid, 50, 50)
+            edgedFrame = cv2.Canny(grey_vid, 100, 100)
 
             #print(edged_frame.shape)
 
@@ -81,16 +81,19 @@ if __name__== "__main__":
                     cogVideo[t,r,c, 0]=cog_y
                     cogVideo[t,r,c ,1] =cog_x
 
-                    cv2.rectangle(edgedFrame,(x1, y1), (x2, y2), (255,0,0), 2)
-
-            #print(cogVideo[t,:,:,:])
-
+            for r in range(ROWS):
+                for c in range(COLS):
+                    x1 = int(WIDTH / COLS) * c
+                    x2 = (int(WIDTH / COLS)) * (c + 1)
+                    y1 = int(HEIGHT / ROWS) * r
+                    y2 = (int(HEIGHT / ROWS)) * (r + 1)
+                    cv2.rectangle(edgedFrame, (x1, y1), (x2, y2), (255), 2)
 
 
             edgeVideo[t]=edgedFrame
 
-            #cv2.imshow('Edges', edgeVideo[t, :, :])
-            #cv2.waitKey(1000)
+            cv2.imshow('Edges', edgeVideo[t, :, :])
+            cv2.waitKey(1000)
 
             statusMsg='\t '+str(t+1)+' frames of '+str(END_FRAME-START_FRAME+1)+' ompleted'
             print(statusMsg)

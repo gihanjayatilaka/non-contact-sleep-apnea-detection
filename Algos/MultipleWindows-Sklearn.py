@@ -98,6 +98,12 @@ if __name__== "__main__":
                     cogVideo[t,r,c, 0]=cog_y
                     cogVideo[t,r,c ,1] =cog_x
 
+            for r in range(ROWS):
+                for c in range(COLS):
+                    x1=int(WIDTH/COLS)*c
+                    x2 = (int(WIDTH / COLS)) * (c+1)
+                    y1=int(HEIGHT/ROWS) * r
+                    y2 = (int(HEIGHT/ ROWS)) * (r+1)
                     cv2.rectangle(edgedFrame,(x1, y1), (x2, y2), (255), 2)
 
             #print(cogVideo[t,:,:,:])
