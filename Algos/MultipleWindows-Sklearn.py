@@ -8,6 +8,7 @@ import argparse
 import cv2
 import sys
 from time import sleep
+from skimage import feature
 
 if __name__== "__main__":
     np.random.seed(0)
@@ -37,15 +38,31 @@ if __name__== "__main__":
 
                 print("Initialized")
 
-            grey_vid = cv2.cvtColor(frame, cv2.IMREAD_GRAYSCALE)
-            #cv2.imshow('Original', frame)
-            edgedFrame = cv2.Canny(grey_vid, 50, 50)
 
+            greyScaleVideo = np.average(frame,axis=2)
+
+            #cv2.imshow('Original', frame)
+
+            HEIGHT = greyScaleVideo.shape[0]
+            WIDTH = greyScaleVideo.shape[1]
+
+            #print(np.shape(frame),np.shape(greyScaleVideo))
+
+            cannyEdge = feature.canny(greyScaleVideo,sigma=20)
+
+            edgedFrame=np.ndarray((cannyEdge.shape),np.uint8)
+
+
+            for y in range(cannyEdge.shape[0]):
+                for x in range(cannyEdge.shape[1]):
+                    if cannyEdge[y,x]:
+                        edgedFrame[y,x]=255
+                    else:
+                        edgedFrame[y,x]=0
             #print(edged_frame.shape)
 
 
-            HEIGHT=grey_vid.shape[0]
-            WIDTH=grey_vid.shape[1]
+
 
 
 
@@ -65,8 +82,8 @@ if __name__== "__main__":
                     if sigma_m>0:
                         cog_y=int(sigma_my/sigma_m)
                         cog_x=int(sigma_mx/sigma_m)
-                        cv2.circle(edgedFrame, (cog_x, cog_y), 1, (60, 60, 60), 1)
-                        cv2.circle(edgedFrame, (cog_x, cog_y), 3, (60, 60, 60), 1)
+                        cv2.circle(edgedFrame, (cog_x, cog_y), 1, (255))
+                        cv2.circle(edgedFrame, (cog_x, cog_y), 3, (255))
 
                     else:
                         if t==0:
@@ -76,12 +93,12 @@ if __name__== "__main__":
                         else:
                             cog_y=cogVideo[t-1,r,c,0]
                             cog_x = cogVideo[t - 1,r,c, 1]
-                            cv2.circle(edgedFrame, (cog_x, cog_y), 3, (60, 60, 60), 1)
+                            cv2.circle(edgedFrame, (cog_x, cog_y), 3, (255), 1)
 
                     cogVideo[t,r,c, 0]=cog_y
                     cogVideo[t,r,c ,1] =cog_x
 
-                    cv2.rectangle(edgedFrame,(x1, y1), (x2, y2), (255,0,0), 2)
+                    cv2.rectangle(edgedFrame,(x1, y1), (x2, y2), (255), 2)
 
             #print(cogVideo[t,:,:,:])
 
@@ -89,8 +106,8 @@ if __name__== "__main__":
 
             edgeVideo[t]=edgedFrame
 
-            #cv2.imshow('Edges', edgeVideo[t, :, :])
-            #cv2.waitKey(1000)
+            cv2.imshow('Edges', edgeVideo[t, :, :])
+            cv2.waitKey(1)
 
             statusMsg='\t '+str(t+1)+' frames of '+str(END_FRAME-START_FRAME+1)+' ompleted'
             print(statusMsg)
