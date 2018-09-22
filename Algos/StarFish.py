@@ -1,5 +1,5 @@
 '''
-python MultipleSignalFusion.py 3.mp4 0 100 5 5
+python Starfish.py 3.mp4 0 100
 
 
 '''
@@ -9,7 +9,6 @@ import cv2
 import sys
 from time import sleep
 import matplotlib
-matplotlib.use('svg',warn=False,force=True)
 import matplotlib.pyplot as plt
 
 def mouse_callback(event, x, y, flags, params):
