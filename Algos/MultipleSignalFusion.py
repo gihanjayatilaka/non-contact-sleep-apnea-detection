@@ -65,8 +65,8 @@ if __name__== "__main__":
                     if sigma_m>0:
                         cog_y=int(sigma_my/sigma_m)
                         cog_x=int(sigma_mx/sigma_m)
-                        cv2.circle(edgedFrame, (cog_y, cog_x), 1, (60, 60, 60), 1)
-                        cv2.circle(edgedFrame, (cog_y, cog_x), 3, (60, 60, 60), 1)
+                        cv2.circle(edgedFrame, (cog_x, cog_y), 1, (60, 60, 60), 1)
+                        cv2.circle(edgedFrame, (cog_x, cog_y), 3, (60, 60, 60), 1)
 
                     else:
                         if t==0:
@@ -76,7 +76,7 @@ if __name__== "__main__":
                         else:
                             cog_y=cogVideo[t-1,r,c,0]
                             cog_x = cogVideo[t - 1,r,c, 1]
-                            cv2.circle(edgedFrame, (cog_y, cog_x), 3, (60, 60, 60), 1)
+                            cv2.circle(edgedFrame, (cog_x, cog_y), 3, (60, 60, 60), 1)
 
                     cogVideo[t,r,c, 0]=cog_y
                     cogVideo[t,r,c ,1] =cog_x
