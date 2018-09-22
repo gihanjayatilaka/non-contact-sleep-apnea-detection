@@ -1,6 +1,17 @@
-gihanchanaka:
-12-06-2018
-RaspberryPi.py
-Call this function :-) 
-mainProg(videoFileName='3.mp4', jsonFileName='sendToServer.json', framesToProcess=1000, x_1=275, y_1=246, x_2=326,
-             y_2=317, smootheningParam=150, isPC=False)
+# Algorithms for non intrusive infant sleep apnea detection
+
+This directory contains image processing algorithms developed for detecting infant sleep apnea detection.
+
+## 01 - Single window center of gravity tracking
+
+Works!
+
+## 02 - Circle fitting
+
+Discontinued.
+
+## 03 - Multiple window center of gravity tacking
+
+Under development.
+
+## 04 - Starfish algorithm
