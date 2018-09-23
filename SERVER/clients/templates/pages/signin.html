@@ -1,0 +1,34 @@
+
+<html>
+    <head>
+
+        {% load static %}
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link href="{%static 'startup.css' %}" rel="stylesheet">
+
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <!------ Include the above in your HEAD tag ---------->    
+    </head>
+    
+    <body>
+        
+                                                                               
+   <div class="col-md-6">
+    <div id="logbox">
+      <form id="signup" method="post" >
+        <h1>account login</h1>
+             {% csrf_token %}
+        <input name="username"  placeholder="enter your username" class="input pass"/>
+        <input name="password" type="password" placeholder="enter your password" required="required" class="input pass"/>
+        <input type="submit" value="Sign me in!" class="inputButton"/>
+        <div class="text-center">
+                                 
+                    <a href="signup/" id="">create an account</a> - <a href="" id="">forgot password</a>
+                </div>
+        </form>
+    </div>
+        </div>
+    </body>
+    
+</html>

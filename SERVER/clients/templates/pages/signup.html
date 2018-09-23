@@ -1,0 +1,42 @@
+
+<html>
+    <head>
+
+        {% load static %}
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link href="{% static 'startup.css' %}" rel="stylesheet">
+
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <!------ Include the above in your HEAD tag ---------->    
+    </head>
+    
+    <body>
+        
+
+      <div class="container">
+        <div class="col-md-6">
+        <div id="logbox">
+          <form id="signup" method="post" >
+
+              {% csrf_token %}
+            <h1>create an account</h1>
+            <input name="username" type="text" placeholder="What's your username?" pattern="^[\w]{3,16}$" autofocus="autofocus" required="required" class="input pass"/>
+            <input name="password" type="password" placeholder="Choose a password" required="required" class="input pass"/>
+            <input name="password2" type="password" placeholder="Confirm password" required="required" class="input pass"/>
+            <input name="email" type="email" placeholder="Email address" class="input pass"/>
+            <input type="submit" value="Sign me up!" class="inputButton"/>
+            <div class="text-center">
+                already have an account? <a href="/" id="login_id">login</a>
+            </div>
+          </form>
+        </div>
+       </div>
+        <!--col-md-6-->
+        </div>
+    
+    </body>
+
+</html>
+
+    
