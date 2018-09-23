@@ -1,1 +1,0 @@
-keras_cifar10_trained_model.h5
