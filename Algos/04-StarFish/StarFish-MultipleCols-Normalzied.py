@@ -1,5 +1,5 @@
 '''
-python Starfish.py 3.mp4 0 100 5 0.01
+python StarFish-MultipleCols-Normalzied.py 3.mp4 0 1000 5 0.01
 
 
 '''
