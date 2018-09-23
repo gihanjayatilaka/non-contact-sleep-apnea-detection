@@ -40,8 +40,6 @@ def isPeak(x):
         return True
     else:
         return False
-
-
 if __name__== "__main__":
     centerBelly_X = 0
     centerBelly_Y = 0
