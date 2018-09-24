@@ -198,17 +198,17 @@ if __name__== "__main__":
         fast=True
         if t>10 and t<(END_FRAME-START_FRAME-10):
             if breathingPeak.__contains__(t):
-                cv2.rectangle(frame, (50, 50), (500, 500), (0, 0, 250), thickness=5)
+                cv2.rectangle(frame, (bellyCenters[0,0]-50, 10), (bellyCenters[COLS-1,0]+50, bellyCenters[COLS-1,1]+50), (0, 0, 250), thickness=5)
                 fast=False
             else:
                 for tt in range(5):
                     if(breathingPeak.__contains__(t+tt)):
-                        cv2.rectangle(frame,(50,50),(500,500),(250,0,0),thickness=5)
+                        cv2.rectangle(frame,(bellyCenters[0,0]-50, 10), (bellyCenters[COLS-1,0]+50, bellyCenters[COLS-1,1]+50),(250,0,0),thickness=5)
                         fast=False
                         break
                 for tt in range(5):
                     if(breathingPeak.__contains__(t-tt)):
-                        cv2.rectangle(frame,(50,50),(500,500),(0,250,0),thickness=5)
+                        cv2.rectangle(frame,(bellyCenters[0,0]-50, 10), (bellyCenters[COLS-1,0]+50, bellyCenters[COLS-1,1]+50),(0,250,0),thickness=5)
                         fast=False
                         break
 
