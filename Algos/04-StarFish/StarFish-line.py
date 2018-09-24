@@ -1,13 +1,12 @@
 '''
-python StarFish-line.py 1.avi 0 500 20 0.05 40
-python StarFish-line.py 3.mp4 0 500 5 0.01 50
+python StarFish-line.py 1.avi 0 500 10 0.01 100
+python StarFish-line.py 1.avi 0 500 10 0.01 100
+python StarFish-line.py 3.mp4 0 500 10 0.05 100
 '''
 import numpy as np
 import argparse
 import cv2
 import sys
-from time import sleep
-import matplotlib
 import matplotlib.pyplot as plt
 
 
@@ -50,11 +49,13 @@ if __name__== "__main__":
     START_FRAME=int(sys.argv[2])
     END_FRAME=int(sys.argv[3])
 
-    assert (END_FRAME>START_FRAME+500),"You need at least 500 frames"
+    assert (END_FRAME>=START_FRAME+500),"You need at least 500 frames"
 
     COLS=int(sys.argv[4])
     LEARNING_RATE=float(sys.argv[5])
     THRESHOLD = int(sys.argv[6])
+    WINDOW_HEIGHT = 5
+
     bellyCenters = np.zeros((COLS,2),dtype=np.int32)
     adaptiveAverage=np.zeros((COLS),dtype=np.float32)
     adaptiveVariance = np.zeros((COLS), dtype=np.float32)
@@ -110,14 +111,13 @@ if __name__== "__main__":
         for col in range(COLS):
 
             while True:
-                WINDOW_HEIGHT=5
 
                 currentMean = np.zeros((3), dtype=np.float32)
                 nextMean = np.zeros((3), dtype=np.float32)
 
                 for x in range(WINDOW_HEIGHT):
-                    currentMean[:]+=frame[bellyCenters[col,1]-(i[col]+x),bellyCenters[col,0],:]
-                    nextMean[:] += frame[bellyCenters[col,1] - (i[col] + x+1), bellyCenters[col,0], :]
+                    currentMean[:]+=frame[bellyCenters[col,1]-(i[col]-x),bellyCenters[col,0],:]
+                    nextMean[:] += frame[bellyCenters[col,1] - (i[col]+x), bellyCenters[col,0], :]
 
                 if np.sum(np.abs(nextMean-currentMean)) < THRESHOLD:
                     i[col]+=1
