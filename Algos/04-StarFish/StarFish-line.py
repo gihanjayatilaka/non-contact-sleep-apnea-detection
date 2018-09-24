@@ -1,7 +1,7 @@
 '''
-python StarFish-line.py 1.avi 0 500 10 0.01 100
-python StarFish-line.py 1.avi 0 500 10 0.01 100
-python StarFish-line.py 3.mp4 0 500 10 0.05 100
+python StarFish-line.py 1.avi 0 500 10 0.01 100 24
+python StarFish-line.py 2.avi 0 500 10 0.01 100 24
+python StarFish-line.py 3.mp4 0 500 10 0.05 100 24
 '''
 import numpy as np
 import argparse
@@ -54,6 +54,7 @@ if __name__== "__main__":
     COLS=int(sys.argv[4])
     LEARNING_RATE=float(sys.argv[5])
     THRESHOLD = int(sys.argv[6])
+    FRAME_RATE=float(sys.argv[7])
     WINDOW_HEIGHT = 5
 
     bellyCenters = np.zeros((COLS,2),dtype=np.int32)
@@ -163,7 +164,7 @@ if __name__== "__main__":
     breathingPattern=np.sum(timeSeries,axis=1)/COLS
     breathingPattern[:250]=np.zeros((250))
     breathingPeak=[]
-
+    breathingInterval=[]
     for t in range(breathingPattern.shape[0]-4):
         if isRisingZero(breathingPattern[t:t+3]):
             print("DEBUG: Found rising zero")
@@ -174,7 +175,15 @@ if __name__== "__main__":
                     breathingPeak.append(ttt)
                     break
 
-    print(breathingPeak)
+    #Because multiple entries occur for a single peak
+    #because of how the rising, falling zeros are checked
+    breathingPeak=list(set(breathingPeak))
+
+    for t in range(len(breathingPeak)-1):
+        breathingInterval.append((breathingPeak[t+1]-breathingPeak[t])/FRAME_RATE)
+
+    print("Breathing peak times",breathingPeak)
+    print("Breathing intervals",breathingInterval)
     cap.release()
 
     #<<<<<<<<<<<<<,
@@ -248,6 +257,9 @@ if __name__== "__main__":
         plt.plot(breathingPeak[t],breathingPattern[breathingPeak[t]],'r.')
 
 
+    plt.figure("Breathing Interval")
+    plt.plot(breathingInterval,"b")
+    plt.plot(breathingInterval, "r.")
     plt.show()
     cv2.waitKey(1000)
 
