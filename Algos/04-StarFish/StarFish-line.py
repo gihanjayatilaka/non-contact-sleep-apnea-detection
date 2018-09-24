@@ -1,5 +1,6 @@
 '''
-python StarFish-line.py 3.mp4 0 100 5 0.01 30
+python StarFish-line.py 1.avi 0 500 20 0.05 40
+python StarFish-line.py 3.mp4 0 500 5 0.01 50
 '''
 import numpy as np
 import argparse
@@ -48,6 +49,8 @@ if __name__== "__main__":
 
     START_FRAME=int(sys.argv[2])
     END_FRAME=int(sys.argv[3])
+
+    assert (END_FRAME>START_FRAME+500),"You need at least 500 frames"
 
     COLS=int(sys.argv[4])
     LEARNING_RATE=float(sys.argv[5])
