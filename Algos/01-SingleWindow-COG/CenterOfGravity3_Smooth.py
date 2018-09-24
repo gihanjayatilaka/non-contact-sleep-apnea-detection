@@ -6,7 +6,7 @@ from scipy import signal
 import numpy.linalg as LA
 import scipy.ndimage.filters as filt
 import datetime
-import serial
+#import serial
 from time import sleep
 
 
@@ -33,13 +33,14 @@ def findTime(peaks,fs):
 
 def printToArduino(str):
 
-    test = serial.Serial()
+    '''test = serial.Serial()
     test.baudrate = 115200
     test.timeout = 0
     test.port = "/dev/ttyUSB0"
     test.open()
     sleep(60)
-    test.write(str)
+    test.write(str)'''
+    return 0
 
 
 
@@ -168,10 +169,10 @@ while (1):
             plt.subplot(4,1,4)
             plt.text(0,0,("REPORT : "+reportName+" \nTime for a breath: "+str(findTime(peaks,30))))
 
-            plt.savefig(reportName)
+            #plt.savefig(reportName)
             printToArduino("JSee report "+reportName+". The condition : good #")
 
-            #plt.show()
+            plt.show()
 
 
 
