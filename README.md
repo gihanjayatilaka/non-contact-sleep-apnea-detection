@@ -24,3 +24,10 @@ The embedded system was developed by [Nuwan Jaliyagoda](http://teambitecode.com/
 ## Acknowledgements
 [Sanjaya Herath](mailto:slh.1995@gmail.com) provided the hardware components. [Dinidu Bhathiya](mailto:Dinidu.Bhathiya@syscolabs.com) provided a dataset. 
 
+## For someone who wants to build up on this project
+Please drop an email to [TeambiteCode@eng.pdn.ac.lk](mailto:bitecode@eng.pdn.ac.lk) or anyone mentioned in people section to obtain datasets or clarify technical details.
+
+### Future work (ideas)
+1. Identifying deafness in infants through behavioural analytics
+2. Identify risky behaviour of the baby (trying to climb out of the cot)
+
