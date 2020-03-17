@@ -1,8 +1,8 @@
 # Sleep Apnea Detection
 
-This is the codebase for *Jayatilaka, Gihan, Weligampola, Harshana, Sritharan, Suren, Pathmanathan, Pankayaraj, Ragel, Roshan and Nawinne, Isuru, 2019. Non-contact Infant Sleep Apnea Detection. arXiv preprint [https://arxiv.org/abs/1910.04725](arXiv:1910.04725).*
+This is the codebase for *Jayatilaka, Gihan, Weligampola, Harshana, Sritharan, Suren, Pathmanathan, Pankayaraj, Ragel, Roshan and Nawinne, Isuru, 2019. Non-contact Infant Sleep Apnea Detection. arXiv preprint [arXiv:1910.04725](https://arxiv.org/abs/1910.04725).*
 
-The work was presented at [http://www.iciis.org/](ICIIS International Conference of Industrial Information Systems 2019). The proceedings will be made available soon.
+The work was presented at [ICIIS International Conference of Industrial Information Systems 2019](http://www.iciis.org/). The proceedings will be made available soon.
 
 
 You may cite this work as,
