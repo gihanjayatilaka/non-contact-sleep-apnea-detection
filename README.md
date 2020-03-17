@@ -1,5 +1,21 @@
 # Sleep Apnea Detection
 
+This is the codebase for *Jayatilaka, Gihan, Weligampola, Harshana, Sritharan, Suren, Pathmanathan, Pankayaraj, Ragel, Roshan and Nawinne, Isuru, 2019. Non-contact Infant Sleep Apnea Detection. arXiv preprint [https://arxiv.org/abs/1910.04725](arXiv:1910.04725).*
+
+The work was presented at [http://www.iciis.org/](ICIIS International Conference of Industrial Information Systems 2019). The proceedings will be made available soon.
+
+
+You may cite this work as,
+@misc{arxiv2019noncontact,
+    title={Non-contact Infant Sleep Apnea Detection},
+    author={Gihan Jayatilaka and Harshana Weligampola and Suren Sritharan and Pankayraj Pathmanathan and Roshan Ragel and Isuru Nawinne},
+    year={2019},
+    eprint={1910.04725},
+    archivePrefix={arXiv},
+    primaryClass={eess.SP}
+}
+
+
 ## Objective
 Developing a 100% non intrusive method for detecting sleep apnea in infants.
 
