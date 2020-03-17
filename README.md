@@ -1,21 +1,5 @@
 # Sleep Apnea Detection
 
-This is the codebase for *Jayatilaka, Gihan, Weligampola, Harshana, Sritharan, Suren, Pathmanathan, Pankayaraj, Ragel, Roshan and Nawinne, Isuru, 2019. Non-contact Infant Sleep Apnea Detection. arXiv preprint [arXiv:1910.04725](https://arxiv.org/abs/1910.04725).*
-
-The work was presented at [ICIIS International Conference of Industrial Information Systems 2019](http://www.iciis.org/). The proceedings will be made available soon.
-
-
-You may cite this work as,
-@misc{arxiv2019noncontact,
-    title={Non-contact Infant Sleep Apnea Detection},
-    author={Gihan Jayatilaka and Harshana Weligampola and Suren Sritharan and Pankayraj Pathmanathan and Roshan Ragel and Isuru Nawinne},
-    year={2019},
-    eprint={1910.04725},
-    archivePrefix={arXiv},
-    primaryClass={eess.SP}
-}
-
-
 ## Objective
 Developing a 100% non intrusive method for detecting sleep apnea in infants.
 
@@ -40,10 +24,24 @@ The embedded system was developed by [Nuwan Jaliyagoda](http://teambitecode.com/
 ## Acknowledgements
 [Sanjaya Herath](mailto:slh.1995@gmail.com) provided the hardware components. [Dinidu Bhathiya](mailto:Dinidu.Bhathiya@syscolabs.com) provided a dataset. 
 
-## For someone who wants to build up on this project
-Please drop an email to [TeambiteCode@eng.pdn.ac.lk](mailto:bitecode@eng.pdn.ac.lk) or anyone mentioned in people section to obtain datasets or clarify technical details.
-
 ### Future work (ideas)
 1. Identifying deafness in infants through behavioural analytics
 2. Identify risky behaviour of the baby (trying to climb out of the cot)
 
+
+## Publications
+
+One algorithm developed in this project was published as **Jayatilaka, Gihan, Weligampola, Harshana, Sritharan, Suren, Pathmanathan, Pankayaraj, Ragel, Roshan and Nawinne, Isuru, 2019. Non-contact Infant Sleep Apnea Detection. arXiv preprint [arXiv:1910.04725](https://arxiv.org/abs/1910.04725).**
+
+The work was presented at [ICIIS International Conference of Industrial Information Systems 2019](http://www.iciis.org/). The proceedings will be made available soon.  
+
+
+You may cite this work as,  
+@misc{arxiv2019noncontact,  
+    title={Non-contact Infant Sleep Apnea Detection},  
+    author={Gihan Jayatilaka and Harshana Weligampola and Suren Sritharan and Pankayraj Pathmanathan and Roshan Ragel and Isuru Nawinne},  
+    year={2019},  
+    eprint={1910.04725},  
+    archivePrefix={arXiv},  
+    primaryClass={eess.SP}  
+}
