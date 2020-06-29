@@ -31,17 +31,20 @@ The embedded system was developed by [Nuwan Jaliyagoda](http://teambitecode.com/
 
 ## Publications
 
-One algorithm developed in this project was published as **Jayatilaka, Gihan, Weligampola, Harshana, Sritharan, Suren, Pathmanathan, Pankayaraj, Ragel, Roshan and Nawinne, Isuru, 2019. Non-contact Infant Sleep Apnea Detection. arXiv preprint [arXiv:1910.04725](https://arxiv.org/abs/1910.04725).**
+One algorithm developed in this project was published as **G. Jayatilaka, H. Weligampola, S. Sritharan, P. Pathmanathan, R. Ragel and I. Nawinne, "Non-contact Infant Sleep Apnea Detection," 2019 14th Conference on Industrial and Information Systems (ICIIS), Kandy, Sri Lanka, 2019, pp. 260-265, doi: 10.1109/ICIIS47346.2019.9063269.**
 
-The work was presented at [ICIIS International Conference of Industrial Information Systems 2019](http://www.iciis.org/). The proceedings will be made available soon.  
+
+**arXiv preprint [arXiv:1910.04725](https://arxiv.org/abs/1910.04725).**
 
 
 You may cite this work as,  
-@misc{arxiv2019noncontact,  
-    title={Non-contact Infant Sleep Apnea Detection},  
-    author={Gihan Jayatilaka and Harshana Weligampola and Suren Sritharan and Pankayraj Pathmanathan and Roshan Ragel and Isuru Nawinne},  
-    year={2019},  
-    eprint={1910.04725},  
-    archivePrefix={arXiv},  
-    primaryClass={eess.SP}  
-}
+<code>
+  @INPROCEEDINGS{non-intrusive-sleep-apnea-detection,
+  author={G. {Jayatilaka} and H. {Weligampola} and S. {Sritharan} and P. {Pathmanathan} and R. {Ragel} and I. {Nawinne}},
+  booktitle={2019 14th Conference on Industrial and Information Systems (ICIIS)}, 
+  title={Non-contact Infant Sleep Apnea Detection}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={260-265},}
+</code>
