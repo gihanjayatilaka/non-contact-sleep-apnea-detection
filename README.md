@@ -31,14 +31,14 @@ The embedded system was developed by [Nuwan Jaliyagoda](http://teambitecode.com/
 
 ## Publications
 
-One algorithm developed in this project was published as **G. Jayatilaka, H. Weligampola, S. Sritharan, P. Pathmanathan, R. Ragel and I. Nawinne, "Non-contact Infant Sleep Apnea Detection," 2019 14th Conference on Industrial and Information Systems (ICIIS), Kandy, Sri Lanka, 2019, pp. 260-265, doi: 10.1109/ICIIS47346.2019.9063269.**
+One algorithm developed in this project was published as **G. Jayatilaka, H. Weligampola, S. Sritharan, P. Pathmanathan, R. Ragel and I. Nawinne, "Non-contact Infant Sleep Apnea Detection," 2019 14th Conference on Industrial and Information Systems (ICIIS), Kandy, Sri Lanka, 2019, pp. 260-265, doi: [10.1109/ICIIS47346.2019.9063269](https://doi.org/10.1109/ICIIS47346.2019.9063269).**
 
 
 **arXiv preprint [arXiv:1910.04725](https://arxiv.org/abs/1910.04725).**
 
 
 You may cite this work as,  
-<code>
+<code><pre>
   @INPROCEEDINGS{non-intrusive-sleep-apnea-detection,
   author={G. {Jayatilaka} and H. {Weligampola} and S. {Sritharan} and P. {Pathmanathan} and R. {Ragel} and I. {Nawinne}},
   booktitle={2019 14th Conference on Industrial and Information Systems (ICIIS)}, 
@@ -47,4 +47,4 @@ You may cite this work as,
   volume={},
   number={},
   pages={260-265},}
-</code>
+</pre></code>
